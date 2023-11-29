@@ -17,12 +17,14 @@ async def on_member_join(member):
     channel=discord.utils.get(member.guild.text_channels,name="gelen-giden")
     await channel.send(f"{member.mention} Aramiza Hosşgeldin!")
     print(f"{member} Aramiza Hosşgeldin!")
+
 #uye cikis bildirim
 @client.event
 async def on_member_remove(member):
     channel=discord.utils.get(member.guild.text_channels,name="gelen-giden")
     await channel.send(f"{member.mention} Aramizdan Ayrildi :(")
     print(f"{member} Aramizdan Ayrildi :(")
+
 #ses kanali giris
 @client.command(pass_context=True)
 async def join(ctx):
@@ -32,6 +34,7 @@ async def join(ctx):
 
     else:
         await ctx.send("Herhangi bir ses kanalinda degilsin!")
+
 #ses kanali cikis
 @client.command(pass_context=True)
 async def leave(ctx):
@@ -150,9 +153,7 @@ async def oyun(ctx):
         elif y == 3:
             await ctx.send("OYUNU KAYBETTİN.")
             break
-@client.command()
-async def hanicikiyodunabi(ctx):
-    await ctx.send("SANANE LAN YARRAM!")
+
 
 @client.command()
 async def kur(ctx):

@@ -40,18 +40,7 @@ async def leave(ctx):
         await ctx.send("ses kanalindan ayrildim!")
     else:
         await ctx.send("Herhangi bir ses kanalinda deigilim")
-#muho replik
-@client.command()
-async def muho(ctx):
-    await ctx.send("yaktin beni muharrem :d")
-#muho emoji
-@client.command()
-async def muharrem(ctx):
-    await ctx.send("muho:https://cdn.discordapp.com/emojis/1073244276886097930.webp?size=96&quality=lossless")
-#muho muzik
-@client.command()
-async def muhomuzik(ctx):
-    await ctx.send("https://www.youtube.com/watch?v=zBay15AeVdM")
+
 #mesaj silme
 @client.command()
 async def clean(ctx, amount: int):
